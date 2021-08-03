@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+.container {
+  border: solid 5px #000;
+  background-color: #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90%;
+  width: 90%;
+  padding: 10px;
+}
+.container > div {
+  border: solid 5px #000;
+  height: 50%;
+}
+.computer,
+.player {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  position: relative;
+}
+.computer {
+  align-items: flex-start;
+}
+.player {
+  align-items: flex-end;
+}
+.computer > div,
+.player > div {
+  width: 30%;
+  height: 40%;
+  border-radius: 15px;
+}
+.computer > div {
+  background-color: #b31f05;
+}
+.player > div {
+  background-color: #114df3;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.rock {
+  background: url(img/rock.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.paper {
+  background: url(img/paper.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.scissor {
+  background: url(img/scissors.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.player > div:hover {
+  transform: scale(1.1);
+  border: white solid 5px;
+}
+.playerScore {
+  position: absolute;
+  top: 5%;
+  font-size: 35px;
+  font-weight: 700;
+}
+.computerScore {
+  position: absolute;
+  bottom: 5%;
+  font-size: 35px;
+  font-weight: 700;
+}
+.computer > h2:not(.computerScore) {
+  position: absolute;
+  bottom: 18%;
+  font-size: 35px;
+  background: #b31f05;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+.player > h2:not(.playerScore) {
+  position: absolute;
+  top: 18%;
+  font-size: 35px;
+  background: #114df3;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+#resultPlayer {
+  top: 37%;
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+#resultComputer {
+  bottom: 37%;
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
