@@ -29,9 +29,18 @@
         <h2 class="playerScore">0</h2>
         <h2>Player</h2>
         <h2 id="resultPlayer"></h2>
-        <div onclick="rock()" class="rock"></div>
-        <div onclick="paper()" class="paper"></div>
-        <div onclick="scissor()" class="scissor"></div>
+        <div onclick="rock()" id="rock" class="rock"></div>
+        <div onclick="paper()" id="paper" class="paper"></div>
+        <div onclick="scissor()" id="scissor" class="scissor"></div>
+      </div>
+      <div class="middle">
+        <div id="computerDisplay" class="computerDisplay"></div>
+        <h2 class="versus">VS</h2>
+        <div id="playerDisplay" class="playerDisplay"></div>
+      </div>
+      <div class="dialogue-con">
+        <h2 id="dialogue"></h2>
+        <button onclick="playAgain()">Play Again</button>
       </div>
     </div>
     <script src="app.js"></script>
